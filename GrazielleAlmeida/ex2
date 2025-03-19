@@ -1,0 +1,21 @@
+#Transforme o seguinte código, descrito com linguagem C, em assembly do MIPS:
+# if (x == y)
+# z = 2;
+# else
+# z = 3;
+
+#x deve ser armazenado em t0
+# y deve ser armazenado em t1
+# z deve ser armazenado em t5
+# Escolha valores arbitrários para x e y, e não se esqueça de testar ambos os casos
+
+li $t0, 11
+li $t1, 11
+
+beq $t0, $t1, achaZ #compara $t0 == $t1, csso sejam iguais vai para label achaZ
+	li $t5, 3
+	j fim
+achaZ:
+	li $t5, 2
+	
+fim:

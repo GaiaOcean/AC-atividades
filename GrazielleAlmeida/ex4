@@ -1,0 +1,15 @@
+
+ li $t0, 8 # x
+ li $t1,4 # y
+ li $t2, 2 # i 
+ li $t3, 0 
+ 
+while:
+ beq $t2, $t3, fora
+ 	addi $t1, $t1,2
+ 	subi $t2, $t2,1
+ 	j while
+ 
+ fora:
+ 	add $t5, $t0,$t1
+ 	
