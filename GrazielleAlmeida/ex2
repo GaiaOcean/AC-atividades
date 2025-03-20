@@ -4,8 +4,8 @@ li $t2, 1
 
 slt $t3,$t0,$t1
 beq $t3,$t2,t1Maior
-	li $t5,$t0
+	move $t5,$t0
 	j end
 t1Maior:
-	li $t5,$t1
+	move $t5,$t1
 end:
