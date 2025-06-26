@@ -1,0 +1,18 @@
+li  $t0, tab_media #guarda tab_media na primeira posicao da memoria
+li $t1, 0 #contador para a quantidade de alunos na tabela 
+li $t7, 0 #contador para o numero de alunos aprovados
+
+while:
+	beq $t1,50, fim: #se t1 == 50 sai do loop e vai para fim
+	lw $t2, ($t0) # t2 recebe a media do aluno
+	bge $t2,5,passou: #se a media for maior do 5, o aluno passo
+	add $t1,$t1,1 #adiciona 1 no contador de alunos
+	add $t0,$t0, 4 #auemnta a posicao na tabela 
+	j while #volta para o while loop
+passou:
+	add $t7,$t7,1 $#aumenta o numero de alunos que passaram
+	j while #volta para o while loop
+fim:
+
+#bge -> branch if greater or equal to
+#bgt -> branch if greater than 
