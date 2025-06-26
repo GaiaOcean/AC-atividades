@@ -1,0 +1,19 @@
+ R type Instruction
+
+ a R type instruction is a type of mips instruction that has 3 registers, one stores the result of an operation and the others have their values used
+ during an operation. Common r type instructions are add, sub and slt  
+
+ I-type (Immediate-type) instructions in MIPS
+
+An I-type instruction in MIPS is used when the operation:
+
+Involves one register and one constant (immediate value)  such as addi
+
+Or involves memory access (like load/store)  sw, lw
+
+Or involves branches (like beq, bne) 
+
+J-type instructions are used for unconditional jumps to a specific address in the program. They don’t work with registers directly — they use a target address instead.
+ex: j, jal(for functions)
+
+
