@@ -1,0 +1,23 @@
+#lembrar de atualizar a posicao da tabela por 4 
+li $t0, tab_P1 #contem o endereço da tab_P1
+li $t1, tab_p2 # #contem o endereço da tab_P2
+li $t2, tab_media  #contem o endereço da tab_media
+
+li $t3, 0 #counter for the number of students
+
+while:
+	beq  $t3,50, fim: #se t3 == 50, sai do loop
+	lw $t4,(%t0) #carrega p1 em t4
+	lw $t5, ($t1) #carrega p2 em t5
+	add $t5, $t4,$t5 # t5 = p1 + p2
+	div $t6,$t5,2 #t6 = soma das provs dividido por 2
+	sw $t6,($t2) #store a média na tabela de medias
+	add $t0, $t0,4 #aumenta a posicao da tabela p1
+	add $t1, $t1, 4 #aumenta a´posição d atabela p2
+	add $t2. #t2,4 #aumenta a posicao da tabela
+	add $t3,$t3,1 #aaumenta 1 no contador de alunis
+	j while #volta ao lopp até que t3 seja igual a 50
+fim:
+
+	
+	
