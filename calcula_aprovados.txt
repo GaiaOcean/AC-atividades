@@ -16,3 +16,5 @@ fim:
 
 #bge -> branch if greater or equal to
 #bgt -> branch if greater than 
+#blt -> branch if less than
+#ble -> branch if less or equal to
